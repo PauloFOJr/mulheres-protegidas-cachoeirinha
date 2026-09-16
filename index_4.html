@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mulheres Protegidas | Guarda Municipal de Cachoeirinha</title>
+<meta name="description" content="Portal de conscientização e combate à violência doméstica — Grupamento Mulheres Protegidas, Guarda Municipal de Cachoeirinha/RS. Você não está sozinha.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+<style>
+  :root{
+    --bg-0:#12082b;
+    --bg-1:#1c0e42;
+    --bg-2:#241154;
+    --purple:#8b3ffb;
+    --purple-dk:#5c22c9;
+    --pink:#ec2f8f;
+    --pink-dk:#b81f6d;
+    --ink-0:#ffffff;
+    --ink-1:#d9cdf5;
+    --ink-2:#a897d1;
+    --line:rgba(255,255,255,.12);
+    --radius:18px;
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+    --maxw:1180px;
+    --font-size-base:16px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:
+      radial-gradient(1100px 600px at 85% -10%, rgba(236,47,143,.20), transparent 60%),
+      radial-gradient(900px 500px at -10% 20%, rgba(139,63,251,.25), transparent 55%),
+      linear-gradient(180deg, var(--bg-0), var(--bg-1) 40%, var(--bg-0));
+    color:var(--ink-0);
+    font-size:var(--font-size-base);
+    line-height:1.6;
+  }
+  a{color:inherit;}
+  img,svg{display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  h1,h2,h3{font-family:inherit;line-height:1.15;margin:0 0 .5em;}
+  section{padding:88px 0;}
+  section:first-of-type{padding-top:0;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    color:var(--pink);
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    font-size:.8rem;
+    margin-bottom:14px;
+  }
+  .eyebrow::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 4px rgba(236,47,143,.25);}
+  p.lead{color:var(--ink-1);font-size:1.08rem;max-width:70ch;}
+
+  /* ---------- Skip link / accessibility ---------- */
+  .skip-link{
+    position:absolute;left:-999px;top:auto;
+    background:var(--pink);color:#fff;padding:12px 18px;border-radius:10px;z-index:999;
+  }
+  .skip-link:focus{left:16px;top:16px;}
+
+  /* ---------- Top utility bar ---------- */
+  .utility-bar{
+    background:var(--bg-0);
+    border-bottom:1px solid var(--line);
+    font-size:.82rem;
+  }
+  .utility-bar .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:8px 24px;flex-wrap:wrap;gap:8px;
+  }
+  .utility-bar .emergency{
+    display:flex;gap:16px;flex-wrap:wrap;color:var(--ink-1);
+  }
+  .utility-bar .emergency b{color:#fff;}
+  .a11y-controls{display:flex;align-items:center;gap:6px;}
+  .a11y-controls button{
+    background:transparent;border:1px solid var(--line);color:var(--ink-1);
+    width:28px;height:28px;border-radius:8px;cursor:pointer;font-weight:700;
+  }
+  .a11y-controls button:hover{border-color:var(--pink);color:#fff;}
+
+  /* ---------- Header / nav ---------- */
+  header.site{
+    position:sticky;top:0;z-index:60;
+    background:rgba(18,8,43,.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  header.site .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+  .brand .shield{
+    width:42px;height:42px;border-radius:12px;
+    background:linear-gradient(135deg,var(--purple),var(--pink));
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .brand .shield svg{width:24px;height:24px;}
+  .brand .name{font-weight:800;font-size:1.05rem;letter-spacing:.01em;}
+  .brand .name small{display:block;font-weight:500;color:var(--ink-2);font-size:.7rem;letter-spacing:.04em;text-transform:uppercase;}
+  nav.main{display:flex;gap:6px;align-items:center;}
+  nav.main a{
+    text-decoration:none;color:var(--ink-1);font-size:.92rem;font-weight:600;
+    padding:10px 14px;border-radius:10px;
+  }
+  nav.main a:hover{background:rgba(255,255,255,.06);color:#fff;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:12px 22px;border-radius:999px;font-weight:700;text-decoration:none;
+    border:1px solid transparent;cursor:pointer;font-size:.95rem;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:active{transform:scale(.97);}
+  .btn-primary{background:linear-gradient(135deg,var(--pink),var(--pink-dk));color:#fff;box-shadow:0 8px 20px rgba(236,47,143,.35);}
+  .btn-primary:hover{box-shadow:0 10px 26px rgba(236,47,143,.5);}
+  .btn-outline{background:transparent;border-color:var(--line);color:#fff;}
+  .btn-outline:hover{border-color:var(--pink);}
+  .btn-ghost{background:rgba(255,255,255,.06);color:#fff;}
+  .header-cta{display:flex;gap:10px;align-items:center;}
+  .menu-toggle{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:10px;width:42px;height:42px;cursor:pointer;}
+
+  /* ---------- Exit button (safety) ---------- */
+  .exit-btn{
+    position:fixed;top:14px;right:16px;z-index:200;
+    background:#111;color:#fff;border:1px solid rgba(255,255,255,.25);
+    padding:10px 16px;border-radius:999px;font-weight:700;font-size:.82rem;
+    display:flex;align-items:center;gap:8px;cursor:pointer;
+    box-shadow:0 6px 18px rgba(0,0,0,.4);
+  }
+  .exit-btn:hover{background:#000;}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:130px 0 90px;position:relative;overflow:hidden;}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;}
+  .hero h1{
+    font-size:clamp(2.3rem,4.6vw,3.6rem);
+    font-weight:900;letter-spacing:-.01em;
+  }
+  .hero h1 .accent{
+    background:linear-gradient(135deg,var(--pink),#c86bff);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px;}
+  .hero-card{
+    background:linear-gradient(160deg,var(--bg-2),var(--bg-1));
+    border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:var(--shadow);
+  }
+  .hero-card h3{font-size:1rem;color:var(--ink-1);text-transform:uppercase;letter-spacing:.06em;font-size:.78rem;margin-bottom:18px;}
+  .hotline{
+    display:flex;align-items:center;gap:14px;
+    padding:14px;border-radius:14px;background:rgba(255,255,255,.04);margin-bottom:12px;
+  }
+  .hotline:last-child{margin-bottom:0;}
+  .hotline .num{
+    width:46px;height:46px;border-radius:12px;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(135deg,var(--purple),var(--pink));
+    font-weight:800;
+  }
+  .hotline .txt b{display:block;font-size:1.05rem;}
+  .hotline .txt span{color:var(--ink-2);font-size:.82rem;}
+  .stat-row{display:flex;gap:10px;margin-top:20px;}
+  .stat-row div{flex:1;text-align:center;background:rgba(255,255,255,.04);border-radius:12px;padding:10px 6px;}
+  .stat-row strong{display:block;font-size:1.1rem;}
+  .stat-row span{font-size:.68rem;color:var(--ink-2);}
+
+  /* ---------- Section headers ---------- */
+  .section-head{max-width:760px;margin-bottom:48px;}
+  .section-head h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:900;}
+
+  /* ---------- O que é ---------- */
+  .definition{
+    display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
+  }
+  .definition .card-quote{
+    background:linear-gradient(160deg,var(--bg-2),var(--bg-1));
+    border:1px solid var(--line);border-radius:24px;padding:34px;
+  }
+  .definition .card-quote p{color:var(--ink-1);font-size:1.02rem;}
+  .definition .card-quote .highlight{
+    color:#fff;font-weight:700;border-left:3px solid var(--pink);padding-left:14px;margin-top:18px;
+  }
+
+  /* ---------- Types grid ---------- */
+  .types-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .type-card{
+    background:linear-gradient(160deg,var(--bg-2),var(--bg-1));
+    border:1px solid var(--line);border-radius:20px;padding:24px 20px;
+    transition:transform .18s ease, border-color .18s ease;
+  }
+  .type-card:hover{transform:translateY(-6px);border-color:var(--pink);}
+  .type-card .icon{
+    width:52px;height:52px;border-radius:14px;
+    background:linear-gradient(135deg,var(--purple),var(--pink));
+    display:flex;align-items:center;justify-content:center;margin-bottom:16px;
+  }
+  .type-card .icon svg{width:26px;height:26px;stroke:#fff;}
+  .type-card h3{font-size:1.05rem;font-weight:800;margin-bottom:10px;}
+  .type-card p{color:var(--ink-1);font-size:.88rem;margin-bottom:12px;}
+  .type-card ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:.82rem;display:flex;flex-direction:column;gap:4px;}
+
+  /* ---------- Rights / laws ---------- */
+  .laws{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .law-card{
+    background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:18px;padding:22px 24px;
+    display:flex;gap:16px;
+  }
+  .law-card--wide{grid-column:1 / -1;}
+  .law-card .tag{
+    flex-shrink:0;width:54px;height:54px;border-radius:14px;
+    background:rgba(139,63,251,.25);color:#fff;font-weight:800;font-size:.72rem;
+    display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.1;
+  }
+  .law-card h3{font-size:1rem;margin-bottom:6px;}
+  .law-card p{color:var(--ink-1);font-size:.87rem;margin:0 0 8px;}
+  .law-card a{font-size:.8rem;color:var(--pink);font-weight:700;text-decoration:none;}
+  .law-card a:hover{text-decoration:underline;}
+
+  /* ---------- Report / channels ---------- */
+  .report{
+    background:linear-gradient(135deg, var(--purple-dk), var(--pink-dk));
+    border-radius:28px;padding:52px;position:relative;overflow:hidden;
+  }
+  .report::after{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(500px 300px at 90% 0%, rgba(255,255,255,.18), transparent 60%);
+  }
+  .report .inner{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+  .report h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;}
+  .report p{color:rgba(255,255,255,.9);}
+  .channel-list{display:flex;flex-direction:column;gap:14px;}
+  .channel{
+    background:rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.2);
+    border-radius:16px;padding:16px 18px;display:flex;align-items:center;gap:14px;
+  }
+  .channel .n{font-size:1.4rem;font-weight:900;min-width:64px;}
+  .channel .d b{display:block;}
+  .channel .d span{font-size:.82rem;color:rgba(255,255,255,.8);}
+
+  /* ---------- Grupamento ---------- */
+  .about-group{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;}
+  .about-group .badge-row{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap;}
+  .badge-pill{
+    background:rgba(255,255,255,.06);border:1px solid var(--line);
+    border-radius:999px;padding:8px 16px;font-size:.8rem;color:var(--ink-1);
+  }
+  .shield-big{
+    width:100%;aspect-ratio:1/1;max-width:320px;margin:0 auto;
+    border-radius:28px;
+    background:linear-gradient(160deg,var(--bg-2),var(--bg-1));
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .shield-big svg{width:52%;height:52%;}
+
+  /* ---------- Contact ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
+  form.contact{
+    background:linear-gradient(160deg,var(--bg-2),var(--bg-1));
+    border:1px solid var(--line);border-radius:24px;padding:32px;
+  }
+  form.contact label{display:block;font-size:.82rem;color:var(--ink-2);margin-bottom:6px;font-weight:700;}
+  form.contact .field{margin-bottom:18px;}
+  form.contact input, form.contact select, form.contact textarea{
+    width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--line);
+    background:rgba(0,0,0,.25);color:#fff;font-family:inherit;font-size:.92rem;
+  }
+  form.contact input:focus, form.contact select:focus, form.contact textarea:focus{
+    outline:none;border-color:var(--pink);
+  }
+  form.contact .confid{
+    font-size:.78rem;color:var(--ink-2);display:flex;gap:8px;align-items:flex-start;margin-top:14px;
+  }
+  .info-side .item{display:flex;gap:14px;margin-bottom:22px;}
+  .info-side .item .ic{
+    width:44px;height:44px;flex-shrink:0;border-radius:12px;background:rgba(139,63,251,.25);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .info-side .item h4{margin:0 0 4px;font-size:.95rem;}
+  .info-side .item p{margin:0;color:var(--ink-1);font-size:.85rem;}
+
+  /* ---------- Footer ---------- */
+  footer{border-top:1px solid var(--line);padding:48px 0 28px;background:var(--bg-0);}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:32px;}
+  footer h4{font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);margin-bottom:14px;}
+  footer .brand{margin-bottom:14px;}
+  footer p{color:var(--ink-2);font-size:.85rem;}
+  footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;}
+  footer ul a{text-decoration:none;color:var(--ink-1);font-size:.88rem;}
+  footer ul a:hover{color:var(--pink);}
+  .footer-bottom{
+    border-top:1px solid var(--line);padding-top:20px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+    color:var(--ink-2);font-size:.78rem;
+  }
+  .disclaimer{
+    max-width:var(--maxw);margin:0 auto 8px;padding:0 24px;color:var(--ink-2);font-size:.74rem;
+  }
+
+  /* ---------- misc ---------- */
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+
+  @media (max-width:1080px){
+    .types-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:980px){
+    .laws{grid-template-columns:1fr;}
+    .hero .wrap{grid-template-columns:1fr;}
+    .definition{grid-template-columns:1fr;}
+    .report .inner{grid-template-columns:1fr;}
+    .about-group{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+    nav.main{display:none;}
+    .menu-toggle{display:inline-flex;align-items:center;justify-content:center;}
+    body.nav-open nav.main{
+      display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;
+      background:var(--bg-0);border-bottom:1px solid var(--line);padding:12px 24px;gap:2px;
+    }
+  }
+  @media (max-width:640px){
+    .types-grid{grid-template-columns:1fr;}
+    section{padding:64px 0;}
+    .hero{padding-top:110px;}
+  }
+</style>
+</head>
+<body>
+
+<a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+<button class="exit-btn" id="exitBtn" title="Sair rapidamente deste site" aria-label="Sair rapidamente deste site">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+  Sair rápido
+</button>
+
+<div class="utility-bar">
+  <div class="wrap">
+    <div class="emergency">
+      <span>Emergência: <b>190</b></span>
+      <span>Central de Atendimento à Mulher: <b>180</b></span>
+      <span>Guarda Municipal de Cachoeirinha: <b>153</b></span>
+    </div>
+    <div class="a11y-controls" aria-label="Ajustar tamanho do texto">
+      <span class="sr-only">Tamanho do texto</span>
+      <button id="fontDown" aria-label="Diminuir texto">A-</button>
+      <button id="fontReset" aria-label="Redefinir texto">A</button>
+      <button id="fontUp" aria-label="Aumentar texto">A+</button>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a href="#topo" class="brand">
+      <span class="shield">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+      </span>
+      <span class="name">Mulheres Protegidas<small>Guarda Municipal de Cachoeirinha</small></span>
+    </a>
+    <nav class="main" aria-label="Navegação principal">
+      <a href="#sobre">O que é</a>
+      <a href="#tipos">Tipos de violência</a>
+      <a href="#direitos">Seus direitos</a>
+      <a href="#denuncie">Denuncie</a>
+      <a href="#grupamento">Grupamento</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="header-cta">
+      <a href="#denuncie" class="btn btn-primary">Ligue 180 / 153</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <section class="hero" id="topo">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Violência contra a mulher é crime</span>
+        <h1>Você não está <span class="accent">sozinha.</span></h1>
+        <p class="lead">
+          Portal de conscientização e enfrentamento à violência doméstica, mantido pelo
+          <strong>Grupamento Mulheres Protegidas</strong> da Guarda Municipal de Cachoeirinha/RS,
+          em parceria com a extensão universitária de Análise e Desenvolvimento de Sistemas — UNIASSELVI.
+          Denuncie. Peça ajuda. A denúncia pode salvar vidas.
+        </p>
+        <div class="actions">
+          <a href="#denuncie" class="btn btn-primary">Como denunciar</a>
+          <a href="#tipos" class="btn btn-outline">Conheça os tipos de violência</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Canais de ajuda imediata</h3>
+        <div class="hotline">
+          <span class="num">180</span>
+          <span class="txt"><b>Central de Atendimento à Mulher</b><span>Denúncia e orientação, 24h, em todo o Brasil</span></span>
+        </div>
+        <div class="hotline">
+          <span class="num">153</span>
+          <span class="txt"><b>Guarda Municipal de Cachoeirinha</b><span>Grupamento Mulheres Protegidas</span></span>
+        </div>
+        <div class="hotline">
+          <span class="num">190</span>
+          <span class="txt"><b>Brigada Militar</b><span>Emergência e risco imediato</span></span>
+        </div>
+        <div class="stat-row">
+          <div><strong>6</strong><span>tipos de violência</span></div>
+          <div><strong>24h</strong><span>Ligue 180</span></div>
+          <div><strong>100%</strong><span>sigiloso</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Entenda</span>
+        <h2>O que é violência doméstica</h2>
+        <p class="lead">Reconhecer os sinais é o primeiro passo para romper o ciclo de violência e buscar ajuda.</p>
+      </div>
+      <div class="definition">
+        <p>
+          A violência doméstica é um problema global que afeta milhões de pessoas, em sua maioria mulheres e
+          crianças, causando danos físicos, psicológicos e sociais profundos. Trata-se de um fenômeno complexo
+          e multifacetado que ocorre dentro das paredes das residências, muitas vezes longe dos olhos do
+          público em geral. Combater a violência doméstica é uma responsabilidade moral, legal e social, que
+          exige atenção, conscientização e ação contundente.
+        </p>
+        <div class="card-quote">
+          <p>
+            <strong>Violência doméstica</strong> é qualquer ação ou omissão que cause sofrimento físico,
+            psicológico, sexual, moral ou patrimonial à mulher, praticada no ambiente familiar, doméstico
+            ou em uma relação íntima de afeto.
+          </p>
+          <p class="highlight">Ela pode acontecer mesmo quando não há convivência no mesmo endereço.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tipos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Você conhece seus direitos?</span>
+        <h2>Os 6 tipos de violência contra a mulher</h2>
+        <p class="lead">Saiba identificar os diferentes tipos de violência doméstica previstos na Lei Maria da Penha e em suas atualizações.</p>
+      </div>
+      <div class="types-grid">
+
+        <div class="type-card">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v0"/><path d="M14 10V4a2 2 0 0 0-4 0v2"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M6 14v0a2 2 0 0 0-4 0c0 2 1 4 1 4l3 4h9a4 4 0 0 0 4-4v-3a2 2 0 0 0-2-2h-4"/></svg></span>
+          <h3>Física</h3>
+          <p>Qualquer agressão que coloque em risco a integridade física da vítima.</p>
+          <ul>
+            <li>Empurrões</li><li>Socos e chutes</li><li>Queimaduras</li><li>Estrangulamento</li><li>Lesões causadas por objetos</li>
+          </ul>
+        </div>
+
+        <div class="type-card">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A5.5 5.5 0 0 0 4 7.5c0 1 .3 2 .8 2.8L4 12l1.8 1.2a5 5 0 0 0-.3 1.8A5.5 5.5 0 0 0 11 20.5V22h2v-1.5a5.5 5.5 0 0 0 5.5-5.5c0-.8-.2-1.5-.5-2.2A5.5 5.5 0 0 0 15.5 2 5.5 5.5 0 0 0 9.5 2Z"/></svg></span>
+          <h3>Psicológica</h3>
+          <p>Acontece quando a vítima sofre ameaças, humilhações ou manipulação emocional.</p>
+          <ul>
+            <li>Ameaças</li><li>Chantagens</li><li>Controle excessivo</li><li>Ciúmes possessivos</li><li>Isolamento de amigos e familiares</li><li>Intimidação</li>
+          </ul>
+        </div>
+
+        <div class="type-card">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <h3>Moral</h3>
+          <p>Consiste em ofender a honra e a reputação da mulher.</p>
+          <ul>
+            <li>Calúnia</li><li>Difamação</li><li>Injúria</li><li>Xingamentos</li><li>Exposição para humilhar ou constranger</li>
+          </ul>
+        </div>
+
+        <div class="type-card">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><circle cx="16" cy="12.5" r="1.5"/></svg></span>
+          <h3>Patrimonial</h3>
+          <p>Ocorre quando há destruição, retenção ou controle dos bens e recursos da vítima.</p>
+          <ul>
+            <li>Quebrar objetos pessoais</li><li>Reter documentos</li><li>Controlar o dinheiro</li><li>Impedir a mulher de trabalhar</li><li>Danificar bens</li>
+          </ul>
+        </div>
+
+        <div class="type-card">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v0"/><path d="M14 10V4a2 2 0 0 0-4 0v6"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M6 14v0a2 2 0 0 0-4 0c0 2 1 4 1 4l3 4h9a4 4 0 0 0 4-4v-3a2 2 0 0 0-2-2"/></svg></span>
+          <h3>Sexual</h3>
+          <p>É qualquer ato sexual realizado sem consentimento ou mediante ameaça, intimidação ou violência.</p>
+          <ul>
+            <li>Obrigar a manter relações sexuais</li><li>Impedir o uso de métodos contraceptivos</li><li>Forçar gravidez ou aborto</li><li>Qualquer prática sem consentimento</li>
+          </ul>
+        </div>
+
+        <div class="type-card">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20h5v-1a4 4 0 0 0-3-3.87"/><path d="M2 20h5"/><path d="M2 20v-1a4 4 0 0 1 3-3.87"/><path d="M14.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"/><path d="M5.5 8.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/><path d="M22.5 8.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/><path d="M9 20v-1a4 4 0 0 1 6 0v1"/></svg></span>
+          <h3>Vicária</h3>
+          <p>Ocorre quando o agressor atinge filhos, filhas ou pessoas queridas da mulher para lhe causar sofrimento, punição ou controle. Reconhecida na Lei Maria da Penha; nos casos mais graves, pode configurar o crime de vicaricídio.</p>
+          <ul>
+            <li>Alienação parental</li><li>Impedir o convívio com os filhos</li><li>Negligência proposital com os filhos</li><li>Usar os filhos para manipular ou punir a mãe</li><li>Violência contra pessoas queridas da vítima</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="direitos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Legislação</span>
+        <h2>Seus direitos e as leis de proteção</h2>
+        <p class="lead">Conheça as principais leis brasileiras que protegem mulheres, crianças e adolescentes contra a violência doméstica.</p>
+      </div>
+      <div class="laws">
+        <div class="law-card">
+          <span class="tag">Lei<br>11.340</span>
+          <div>
+            <h3>Lei Maria da Penha (2006)</h3>
+            <p>Cria mecanismos para coibir a violência doméstica e familiar contra a mulher e estabelece medidas de assistência e proteção.</p>
+            <a href="https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm" target="_blank" rel="noopener">Ler a lei completa →</a>
+          </div>
+        </div>
+        <div class="law-card">
+          <span class="tag">Lei<br>13.104</span>
+          <div>
+            <h3>Lei do Feminicídio (2015)</h3>
+            <p>Altera o Código Penal para prever o feminicídio como circunstância qualificadora do crime de homicídio.</p>
+            <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13104.htm" target="_blank" rel="noopener">Ler a lei completa →</a>
+          </div>
+        </div>
+        <div class="law-card">
+          <span class="tag">Lei<br>12.845</span>
+          <div>
+            <h3>Atendimento à violência sexual (2013)</h3>
+            <p>Dispõe sobre o atendimento obrigatório e integral de pessoas em situação de violência sexual pelos serviços de saúde.</p>
+            <a href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12845.htm" target="_blank" rel="noopener">Ler a lei completa →</a>
+          </div>
+        </div>
+        <div class="law-card">
+          <span class="tag">Lei<br>12.737</span>
+          <div>
+            <h3>Crimes informáticos (2012)</h3>
+            <p>Tipifica delitos informáticos, incluindo a invasão de dispositivos e exposição não autorizada de conteúdo — relevante em casos de violência moral e virtual.</p>
+            <a href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12737.htm" target="_blank" rel="noopener">Ler a lei completa →</a>
+          </div>
+        </div>
+        <div class="law-card law-card--wide">
+          <span class="tag">Lei<br>15.384</span>
+          <div>
+            <h3>Violência vicária e vicaricídio (2026)</h3>
+            <p>Inclui expressamente a violência vicária na Lei Maria da Penha e cria o crime de vicaricídio — matar descendente, ascendente ou dependente da vítima para lhe causar sofrimento, punição ou controle —, classificado como crime hediondo.</p>
+            <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15384.htm" target="_blank" rel="noopener">Ler a lei completa →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="denuncie">
+    <div class="wrap">
+      <div class="report">
+        <div class="inner">
+          <div>
+            <span class="eyebrow" style="color:#fff">Peça ajuda</span>
+            <h2>A denúncia pode salvar vidas</h2>
+            <p>
+              Se você ou alguém que conhece está passando por essa situação, procure ajuda. O Grupamento
+              Mulheres Protegidas, da Guarda Municipal de Cachoeirinha, atua na prevenção, no acolhimento e
+              no acompanhamento das mulheres em situação de violência, contribuindo para a proteção e o
+              cumprimento das medidas legais.
+            </p>
+            <p style="font-size:.85rem;">
+              Para atendimento presencial, endereços e horários oficiais, consulte o perfil da
+              <a href="https://www.instagram.com/guardamunicipaldecachoeirinha/" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">Guarda Municipal de Cachoeirinha no Instagram</a>.
+            </p>
+          </div>
+          <div class="channel-list">
+            <div class="channel">
+              <span class="n">180</span>
+              <span class="d"><b>Central de Atendimento à Mulher</b><span>Nacional, gratuito e sigiloso — 24h</span></span>
+            </div>
+            <div class="channel">
+              <span class="n">153</span>
+              <span class="d"><b>Guarda Municipal de Cachoeirinha</b><span>Grupamento Mulheres Protegidas</span></span>
+            </div>
+            <div class="channel">
+              <span class="n">190</span>
+              <span class="d"><b>Brigada Militar</b><span>Situações de risco imediato</span></span>
+            </div>
+            <div class="channel">
+              <span class="n">100</span>
+              <span class="d"><b>Disque Direitos Humanos</b><span>Denúncias de violações em geral</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="grupamento">
+    <div class="wrap">
+      <div class="about-group">
+        <div class="shield-big">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#g)" stroke-width="1.5">
+            <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b3ffb"/><stop offset="1" stop-color="#ec2f8f"/></linearGradient></defs>
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <div>
+          <span class="eyebrow">Quem cuida</span>
+          <h2>Grupamento Mulheres Protegidas</h2>
+          <p class="lead">
+            Vinculado à Secretaria Municipal de Segurança Pública e à Guarda Municipal de Cachoeirinha/RS,
+            o Grupamento Mulheres Protegidas atua na prevenção, no acolhimento e no acompanhamento das
+            mulheres em situação de violência, contribuindo para a proteção das vítimas e o cumprimento
+            das medidas legais.
+          </p>
+          <div class="badge-row">
+            <span class="badge-pill">Prevenção</span>
+            <span class="badge-pill">Acolhimento</span>
+            <span class="badge-pill">Acompanhamento</span>
+            <span class="badge-pill">Cumprimento de medidas protetivas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Fale conosco</span>
+        <h2>Entre em contato</h2>
+        <p class="lead">Em caso de risco imediato, ligue 190 ou 153. Este formulário é destinado a dúvidas, solicitações de palestras e parcerias — não use para emergências.</p>
+      </div>
+      <div class="contact-grid">
+        <form class="contact" id="contactForm">
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="assunto">Assunto</label>
+            <select id="assunto" name="assunto">
+              <option>Dúvida geral</option>
+              <option>Solicitar palestra/ação educativa</option>
+              <option>Parceria institucional</option>
+              <option>Sugestão para o site</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Enviar mensagem</button>
+          <p class="confid">🔒 Suas informações não são divulgadas publicamente. Este formulário não substitui o registro de uma denúncia.</p>
+        </form>
+        <div class="info-side">
+          <div class="item">
+            <span class="ic">📞</span>
+            <div><h4>Ligue 153</h4><p>Guarda Municipal de Cachoeirinha — Grupamento Mulheres Protegidas.</p></div>
+          </div>
+          <div class="item">
+            <span class="ic">📷</span>
+            <div><h4>Instagram</h4><p><a href="https://www.instagram.com/guardamunicipaldecachoeirinha/" target="_blank" rel="noopener">@guardamunicipaldecachoeirinha</a></p></div>
+          </div>
+          <div class="item">
+            <span class="ic">📍</span>
+            <div><h4>Cachoeirinha/RS</h4><p>Secretaria Municipal de Segurança Pública.</p></div>
+          </div>
+          <div class="item">
+            <span class="ic">🎓</span>
+            <div><h4>Projeto de extensão</h4><p>Desenvolvido por estudante do curso de Análise e Desenvolvimento de Sistemas — UNIASSELVI, em parceria com a instituição.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="#topo" class="brand">
+          <span class="shield">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+          </span>
+          <span class="name">Mulheres Protegidas</span>
+        </a>
+        <p>Portal de conscientização e enfrentamento à violência doméstica. Violência contra a mulher é crime — denuncie, peça ajuda, você não está sozinha.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#sobre">O que é violência doméstica</a></li>
+          <li><a href="#tipos">Tipos de violência</a></li>
+          <li><a href="#direitos">Seus direitos</a></li>
+          <li><a href="#denuncie">Denuncie</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Canais oficiais</h4>
+        <ul>
+          <li><a href="tel:180">Ligue 180 — Central de Atendimento à Mulher</a></li>
+          <li><a href="tel:153">Ligue 153 — Guarda Municipal</a></li>
+          <li><a href="tel:190">Ligue 190 — Emergência</a></li>
+          <li><a href="https://www.instagram.com/guardamunicipaldecachoeirinha/" target="_blank" rel="noopener">Instagram oficial</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Grupamento Mulheres Protegidas — Guarda Municipal de Cachoeirinha/RS.</span>
+      <span>Projeto de extensão · Análise e Desenvolvimento de Sistemas · UNIASSELVI</span>
+    </div>
+  </div>
+  <p class="disclaimer">
+    Este site foi desenvolvido como atividade de extensão universitária (UNIASSELVI), em parceria com a
+    Guarda Municipal de Cachoeirinha/RS, com finalidade educativa e de conscientização. Conteúdo elaborado
+    com base na Lei nº 11.340/2006 (Lei Maria da Penha) e em materiais públicos de campanha do Grupamento
+    Mulheres Protegidas. Antes da publicação oficial, revise e valide todas as informações de contato junto
+    à instituição parceira.
+  </p>
+</footer>
+
+<script>
+(function(){
+  // Mobile menu toggle
+  var menuToggle = document.getElementById('menuToggle');
+  menuToggle.addEventListener('click', function(){
+    document.body.classList.toggle('nav-open');
+  });
+  document.querySelectorAll('nav.main a').forEach(function(a){
+    a.addEventListener('click', function(){ document.body.classList.remove('nav-open'); });
+  });
+
+  // Font size controls
+  var root = document.documentElement;
+  var base = 16;
+  function setSize(px){
+    root.style.setProperty('--font-size-base', px+'px');
+  }
+  document.getElementById('fontUp').addEventListener('click', function(){
+    base = Math.min(base+2, 22); setSize(base);
+  });
+  document.getElementById('fontDown').addEventListener('click', function(){
+    base = Math.max(base-2, 13); setSize(base);
+  });
+  document.getElementById('fontReset').addEventListener('click', function(){
+    base = 16; setSize(base);
+  });
+
+  // Safety quick-exit: redirects immediately to a neutral site
+  document.getElementById('exitBtn').addEventListener('click', function(){
+    window.location.replace('https://www.google.com');
+  });
+  // Also allow pressing ESC three times quickly as a panic exit
+  var escCount = 0, escTimer = null;
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      escCount++;
+      clearTimeout(escTimer);
+      escTimer = setTimeout(function(){ escCount = 0; }, 1200);
+      if(escCount >= 3){ window.location.replace('https://www.google.com'); }
+    }
+  });
+
+  // Contact form — demonstração acadêmica: valida os campos e confirma visualmente,
+  // sem enviar os dados a nenhum servidor, e-mail ou serviço externo.
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var form = e.target;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    var btn = form.querySelector('button[type="submit"]');
+    var originalText = btn.textContent;
+    btn.textContent = 'Mensagem registrada ✓';
+    btn.disabled = true;
+    form.reset();
+    setTimeout(function(){
+      btn.textContent = originalText;
+      btn.disabled = false;
+    }, 3500);
+  });
+})();
+</script>
+
+</body>
+</html>
