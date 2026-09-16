@@ -29,39 +29,6 @@ Este projeto tem como objetivo disponibilizar uma solução colaborativa para a 
 - Ícones em SVG inline;
 - Hospedagem estática via **GitHub Pages**.
 
-## 📁 Estrutura do repositório
-
-```
-├── index.html              # Site completo (HTML + CSS + JS em um único arquivo)
-└── docs/                    # Documentação da atividade de extensão
-    ├── relatorio.docx        # Relatório detalhado do projeto
-    ├── paper-academico.docx  # Paper acadêmico
-    ├── questionario-avaliacao.docx  # Questionário de avaliação semestral
-    └── wireframes/            # Protótipos de baixa fidelidade
-```
-
-## 🚀 Como executar localmente
-
-Como o site é 100% estático, basta abrir o arquivo diretamente no navegador:
-
-```bash
-git clone https://github.com/<seu-usuario>/<seu-repositorio>.git
-cd <seu-repositorio>
-```
-
-Depois é só abrir o `index.html` no navegador, ou usar um servidor local simples:
-
-```bash
-python3 -m http.server 8000
-# acesse http://localhost:8000
-```
-
-## 🌐 Publicando com GitHub Pages
-
-1. Acesse **Settings > Pages** no repositório;
-2. Em **Source**, selecione a branch `main` e a pasta `/root`;
-3. Salve — o GitHub Pages publicará o site em poucos minutos em `https://<seu-usuario>.github.io/<seu-repositorio>/`.
-
 ## ⚠️ Aviso importante
 
 Este é um **projeto acadêmico**, desenvolvido como atividade de extensão universitária. O formulário de contato do site é apenas uma demonstração de front-end: ele valida os campos e exibe uma confirmação visual, mas **não envia dados para nenhum servidor, e-mail ou serviço externo**. Para contato real ou denúncias, utilize sempre os canais oficiais:
@@ -82,7 +49,7 @@ Este é um **projeto acadêmico**, desenvolvido como atividade de extensão univ
 
 ## 👤 Autor
 
-**Paulo Jr**
+**Paulo Fernando de Oliveira Júnior**
 E-mail: junior.pfo@gmail.com
 
 ## 📄 Licença
