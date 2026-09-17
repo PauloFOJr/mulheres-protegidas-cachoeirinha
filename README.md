@@ -32,12 +32,12 @@ Este projeto tem como objetivo disponibilizar uma solução colaborativa para a 
 ## 📁 Estrutura do repositório
 
 ```
-├── index.html              # Site completo (HTML + CSS + JS em um único arquivo)
-└── docs/                    # Documentação da atividade de extensão
-    ├── relatorio.docx        # Relatório detalhado do projeto
-    ├── paper-academico.docx  # Paper acadêmico
-    ├── questionario-avaliacao.docx  # Questionário de avaliação semestral
-    └── wireframes/            # Protótipos de baixa fidelidade
+├── index.html        # Estrutura HTML do site
+├── css/
+│   └── style.css     # Estilos (cores, layout, responsividade)
+├── js/
+│   └── script.js     # Interatividade (menu, acessibilidade, saída rápida, formulário)
+└── README.md
 ```
 
 ## 🚀 Como executar localmente
