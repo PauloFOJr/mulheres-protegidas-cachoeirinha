@@ -82,7 +82,7 @@ Este é um **projeto acadêmico**, desenvolvido como atividade de extensão univ
 
 ## 👤 Autor
 
-**Paulo Jr**
+**Paulo Fernando de Oliveira Júnior**
 E-mail: junior.pfo@gmail.com
 
 ## 📄 Licença
